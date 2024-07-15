@@ -122,7 +122,7 @@ jobs:
         run: |
           echo Executing Xygeni scan ....    
           
-          ${GITHUB_WORKSPACE}/scanner/xygeni scan --never-fail  -f none --include-collaborators --run="secrets" --no-conf-download -n ${{ env.XY_PRJ_NAME }} --dir ${GITHUB_WORKSPACE} -e **/scanner/**
+          ${GITHUB_WORKSPACE}/scanner/xygeni scan --never-fail  -f none --include-collaborators --run="inventory,secrets" --no-conf-download -n ${{ env.XY_PRJ_NAME }} --dir ${GITHUB_WORKSPACE} -e **/scanner/**
           #${GITHUB_WORKSPACE}/scanner/xygeni secrets --never-fail --no-conf-download -n ${{ env.XY_PRJ_NAME }} --dir ${GITHUB_WORKSPACE} -e **/scanner/** --upload
           exit 1
 
